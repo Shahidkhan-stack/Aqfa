@@ -44,11 +44,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             <NavLink href="/">Home</NavLink>
+            <NavLink href="/services">Offerings</NavLink>
             <NavLink href="/about">About</NavLink>
             {isAdmin && <NavLink href="/write">Write</NavLink>}
-            <Button size="sm" variant="default" className="rounded-full px-6 font-medium">
-              Subscribe
-            </Button>
           </nav>
 
           {/* Mobile Nav */}

@@ -9,6 +9,8 @@ import Article from "@/pages/Article";
 import Editor from "@/pages/Editor";
 import About from "@/pages/About";
 
+import Services from "@/pages/Services";
+
 function Router() {
   return (
     <Switch>
@@ -16,6 +18,7 @@ function Router() {
       <Route path="/article/:id" component={Article} />
       <Route path="/write" component={Editor} />
       <Route path="/about" component={About} />
+      <Route path="/services" component={Services} />
       <Route component={NotFound} />
     </Switch>
   );

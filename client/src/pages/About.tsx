@@ -10,31 +10,30 @@ export default function About() {
         <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-24 items-start max-w-5xl mx-auto">
           
           {/* Sidebar Info */}
-          <div className="space-y-6 md:sticky md:top-32">
-            <div className="aspect-square overflow-hidden rounded-2xl shadow-xl rotate-3 hover:rotate-0 transition-transform duration-500">
-              <img src={author.avatar} alt={author.name} className="w-full h-full object-cover" />
+          <div className="space-y-8 md:sticky md:top-32">
+            <div className="aspect-square bg-secondary rounded-[2rem] flex items-center justify-center border border-border/50 shadow-inner">
+              <span className="text-6xl font-serif font-bold text-muted-foreground/20">A.</span>
             </div>
             
-            <div className="space-y-4">
-              <h2 className="text-2xl font-serif font-bold">{author.name}</h2>
-              <p className="text-primary font-medium">{author.role}</p>
+            <div className="space-y-6">
+              <div className="space-y-1">
+                <h2 className="text-3xl font-serif font-bold tracking-tight">Aqfa</h2>
+                <p className="text-muted-foreground font-medium uppercase tracking-widest text-xs">Creative Direction</p>
+              </div>
               
-              <div className="space-y-2 text-sm text-muted-foreground pt-4 border-t">
+              <div className="space-y-4 text-sm text-muted-foreground pt-6 border-t">
                 <div className="flex items-center gap-3">
-                  <MapPin className="w-4 h-4" /> San Francisco, CA
+                  <MapPin className="w-4 h-4" /> Editorial Studio
                 </div>
                 <div className="flex items-center gap-3">
-                  <Briefcase className="w-4 h-4" /> Available for Hire
-                </div>
-                <div className="flex items-center gap-3">
-                  <Link2 className="w-4 h-4" /> lumina.dev/binte
+                  <Link2 className="w-4 h-4" /> lumina.dev/aqfa
                 </div>
               </div>
 
-              <div className="pt-4 flex gap-3">
+              <div className="pt-6">
                 <a href={`mailto:${author.email}`} className="w-full">
-                  <Button className="w-full rounded-full gap-2">
-                    <Mail className="w-4 h-4" /> Contact Me
+                  <Button className="w-full rounded-full h-12 gap-2 bg-foreground text-background">
+                    <Mail className="w-4 h-4" /> Message
                   </Button>
                 </a>
               </div>
@@ -42,25 +41,20 @@ export default function About() {
           </div>
 
           {/* Main Bio Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
-                Hi, I'm Binte. <br/>
-                <span className="text-muted-foreground">I write about the intersection of design, technology, and culture.</span>
+          <div className="space-y-12">
+            <div className="space-y-6">
+              <h1 className="text-5xl md:text-7xl font-serif font-bold leading-[1] tracking-tighter">
+                AQFA. <br/>
+                <span className="text-muted-foreground italic font-normal">Lead Content Strategist.</span>
               </h1>
             </div>
 
-            <div className="prose prose-lg prose-stone text-muted-foreground">
+            <div className="prose prose-xl prose-stone text-foreground/80 leading-relaxed font-light">
               <p>
-                I am a multidisciplinary writer and strategist with a passion for clarity. 
-                In a world full of noise, I believe the most valuable skill is the ability to distill complex ideas into simple, resonant narratives.
+                Architecture of the mind, expressed through the written word. My practice is centered on the belief that clarity is the ultimate luxury. 
               </p>
               <p>
-                With over a decade of experience in the tech industry, I've worn many hats: content strategist, UX writer, frontend developer, and product manager. 
-                This diverse background allows me to approach storytelling with a unique perspective—one that balances technical accuracy with human emotion.
-              </p>
-              <p>
-                Currently, I am looking for full-time opportunities where I can lead content initiatives and help build products that matter.
+                As a Creative Director and Editorial Lead, I help brands and individuals find their core resonance through structured storytelling and minimalist design principles.
               </p>
             </div>
 

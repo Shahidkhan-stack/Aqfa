@@ -1,14 +1,13 @@
-import heroWorkspace from "@/assets/images/hero-workspace.png";
-import authorAvatar from "@/assets/images/avatar-author-female.png";
+import heroAbstract from "@/assets/images/hero-abstract.png";
 import blogThumb1 from "@/assets/images/blog-thumb-1.png";
 import blogThumb2 from "@/assets/images/blog-thumb-2.png";
 import blogThumb3 from "@/assets/images/blog-thumb-3.png";
 
 export const author = {
-  name: "Binte Shahid",
-  role: "Content Creator & Storyteller",
-  bio: "I craft compelling narratives at the intersection of technology, design, and culture. I am passionate about sharing stories that inspire and connect people.",
-  avatar: authorAvatar,
+  name: "Aqfa",
+  role: "Creative Director & Editorial Lead",
+  bio: "Distilling complex narratives into elegant digital experiences. Focused on the intersection of modern aesthetics, human behavior, and future technology.",
+  avatar: null, // Removing personal photo for a more anonymous, professional editorial feel
   email: "binteshahidattaria3@gmail.com",
   social: {
     twitter: "https://twitter.com",

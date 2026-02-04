@@ -39,8 +39,8 @@ export default function Article() {
 
           <div className="flex items-center justify-center gap-4 mt-8">
             <Avatar className="w-10 h-10 border border-border">
-              <AvatarImage src={author.avatar} />
-              <AvatarFallback>AS</AvatarFallback>
+              <AvatarImage src={author.avatar || undefined} />
+              <AvatarFallback>AQ</AvatarFallback>
             </Avatar>
             <div className="text-left">
               <p className="text-sm font-semibold">{author.name}</p>

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { author, posts } from "@/lib/data";
 import { ArrowRight, Clock } from "lucide-react";
 import { Link } from "wouter";
-import heroWorkspace from "@/assets/images/hero-workspace.png";
+import heroAbstract from "@/assets/images/hero-abstract.png";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -13,30 +13,32 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative px-4 md:px-6 pb-16 md:pb-24">
+      <section className="relative px-4 md:px-6 pb-16 md:pb-24 border-b border-border/10">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-8"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-[1.1]">
-              Stories, ideas, <br/> and <span className="text-muted-foreground italic">insights.</span>
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
-              A curated space for thoughtful writing on design, technology, and the creative process.
-            </p>
-            <div className="flex gap-4 pt-2">
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold leading-[0.9] tracking-tighter">
+                ELEGANCE <br/> IN <span className="text-muted-foreground italic font-normal">FORM.</span>
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-sm leading-relaxed font-light">
+                An editorial platform dedicated to the architecture of ideas and the craft of storytelling.
+              </p>
+            </div>
+            <div className="flex gap-4 pt-4">
               <Link href="/about">
-                <Button size="lg" className="rounded-full px-8 h-12 text-base">
-                  Meet the Author
+                <Button size="lg" className="rounded-full px-10 h-14 text-base tracking-tight bg-foreground text-background hover:bg-foreground/90 transition-all duration-300">
+                  Profile
                 </Button>
               </Link>
               {localStorage.getItem("is_admin") === "true" && (
                 <Link href="/write">
-                  <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-base border-primary/20 hover:bg-secondary/50">
-                    Start Writing
+                  <Button variant="outline" size="lg" className="rounded-full px-10 h-14 text-base border-border hover:bg-secondary/50">
+                    Create
                   </Button>
                 </Link>
               )}
@@ -44,18 +46,18 @@ export default function Home() {
           </motion.div>
           
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="relative hidden md:block"
           >
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-white/10">
               <img 
-                src={heroWorkspace} 
-                alt="Workspace" 
-                className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
+                src={heroAbstract} 
+                alt="Abstract Design" 
+                className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent pointer-events-none" />
             </div>
           </motion.div>
         </div>
