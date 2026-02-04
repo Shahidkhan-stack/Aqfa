@@ -33,11 +33,13 @@ export default function Home() {
                   Meet the Author
                 </Button>
               </Link>
-              <Link href="/write">
-                <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-base border-primary/20 hover:bg-secondary/50">
-                  Start Writing
-                </Button>
-              </Link>
+              {localStorage.getItem("is_admin") === "true" && (
+                <Link href="/write">
+                  <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-base border-primary/20 hover:bg-secondary/50">
+                    Start Writing
+                  </Button>
+                </Link>
+              )}
             </div>
           </motion.div>
           

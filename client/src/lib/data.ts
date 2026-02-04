@@ -1,15 +1,15 @@
 import heroWorkspace from "@/assets/images/hero-workspace.png";
-import authorAvatar from "@/assets/images/avatar-author.png";
+import authorAvatar from "@/assets/images/avatar-author-female.png";
 import blogThumb1 from "@/assets/images/blog-thumb-1.png";
 import blogThumb2 from "@/assets/images/blog-thumb-2.png";
 import blogThumb3 from "@/assets/images/blog-thumb-3.png";
 
 export const author = {
-  name: "Alex Sterling",
-  role: "Senior Content Strategist & Writer",
-  bio: "I craft compelling narratives at the intersection of technology, design, and culture. With over 8 years of experience, I help brands find their voice and connect with their audience through thoughtful storytelling.",
+  name: "Binte Shahid",
+  role: "Content Creator & Storyteller",
+  bio: "I craft compelling narratives at the intersection of technology, design, and culture. I am passionate about sharing stories that inspire and connect people.",
   avatar: authorAvatar,
-  email: "alex.sterling@lumina.dev",
+  email: "binteshahidattaria3@gmail.com",
   social: {
     twitter: "https://twitter.com",
     linkedin: "https://linkedin.com",

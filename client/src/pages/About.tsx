@@ -27,14 +27,16 @@ export default function About() {
                   <Briefcase className="w-4 h-4" /> Available for Hire
                 </div>
                 <div className="flex items-center gap-3">
-                  <Link2 className="w-4 h-4" /> lumina.dev/alex
+                  <Link2 className="w-4 h-4" /> lumina.dev/binte
                 </div>
               </div>
 
               <div className="pt-4 flex gap-3">
-                <Button className="w-full rounded-full gap-2">
-                  <Mail className="w-4 h-4" /> Contact Me
-                </Button>
+                <a href={`mailto:${author.email}`} className="w-full">
+                  <Button className="w-full rounded-full gap-2">
+                    <Mail className="w-4 h-4" /> Contact Me
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -43,7 +45,7 @@ export default function About() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
-                Hi, I'm Alex. <br/>
+                Hi, I'm Binte. <br/>
                 <span className="text-muted-foreground">I write about the intersection of design, technology, and culture.</span>
               </h1>
             </div>

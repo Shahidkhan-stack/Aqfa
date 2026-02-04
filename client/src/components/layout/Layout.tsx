@@ -7,6 +7,11 @@ import { useState, useEffect } from "react";
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  
+  // Simulation of admin state. In a real app, this would come from auth.
+  const [isAdmin] = useState(() => {
+    return localStorage.getItem("is_admin") === "true";
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +45,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <nav className="hidden md:flex items-center gap-8">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/about">About</NavLink>
-            <NavLink href="/write">Write</NavLink>
+            {isAdmin && <NavLink href="/write">Write</NavLink>}
             <Button size="sm" variant="default" className="rounded-full px-6 font-medium">
               Subscribe
             </Button>
@@ -61,9 +66,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Link href="/about">
                   <a className="text-lg font-medium">About</a>
                 </Link>
-                <Link href="/write">
-                  <a className="text-lg font-medium">Write</a>
-                </Link>
+                {isAdmin && (
+                  <Link href="/write">
+                    <a className="text-lg font-medium">Write</a>
+                  </Link>
+                )}
                 <Button className="w-full rounded-full">Subscribe</Button>
               </div>
             </SheetContent>
